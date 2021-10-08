@@ -16,7 +16,7 @@
         "min": 0,
         "max": 155,
         "step": 1,
-        "name": "Minimum Population: "
+        "name": "Happiness Rank: "
       }
     }
   ],
