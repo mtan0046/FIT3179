@@ -1,0 +1,28 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 500,
+  "title": "Tsunamis from 2100 BC from The Global Historical Tsunami Database",
+  "projection": {"type": "equalEarth"},
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/mtan0046/FIT3179/main/customgeo.topojson",
+        "format": {"type": "topojson", "feature": "custom.geo"}
+      },
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/mtan0046/FIT3179/main/tsunami_dataset.csv"
+      },
+      "mark": {"type": "circle", "tooltip": {"content": "data"}},
+      "encoding": {
+        "longitude": {"field": "LONGITUDE", "type": "quantitative"},
+        "latitude": {"field": "LATITUDE", "type": "quantitative"},
+        "size": {"field": "EQ_MAGNITUDE", "type": "quantitative"}
+      }
+    }
+  ],
+  "config": {}
+}
