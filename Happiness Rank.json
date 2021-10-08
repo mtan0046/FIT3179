@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Gross Domestic Product per Capita of the World in Year 2020",
+  "title": "World Happiness in 2016",
   "width": 800,
   "height": 600,
   "data": {
